@@ -1,3 +1,7 @@
+--[[
+    dont mind the retarded way i coded this ui :P
+--]]
+
 local start_time = os.clock()
 
 local client = game.Players.LocalPlayer
