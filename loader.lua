@@ -3,7 +3,7 @@ local repository = "lego-hub"
 local branch = "main"
 
 local games = {
-
+	[7009987220] = "test"
 }
 
 local function import(file)
