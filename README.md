@@ -1,5 +1,5 @@
 ## lego-hub
-free road blocks hub for robanger/random games
+free road blocks hacks hub for robanger/random games
 
 ## Initilization
 ```lua
