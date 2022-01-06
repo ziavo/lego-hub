@@ -3,7 +3,6 @@ local repository = "lego-hub"
 local branch = "main"
 
 local games = {
-	[7009987220] = "test",
 	[2533391464] = "snowman_simulator",
 }
 
