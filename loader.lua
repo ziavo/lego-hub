@@ -12,7 +12,7 @@ end
 local function init()
 	local file_name = games[game.PlaceId]
 	if file_name then
-		import("files/"..file_name)
+		import("games/"..file_name)
 	end
 end
 init()
