@@ -46,6 +46,7 @@ local function fireproximityprompt(Obj, Amount, Skip)
             end
             Obj:InputHoldEnd()
         end
+
         Obj.HoldDuration = PromptTime
     else 
         error("userdata<ProximityPrompt> expected")
@@ -190,3 +191,4 @@ task.spawn(function() -- auto section
 end)
 
 library:Notify(math.floor((os.clock() - start_time) * 1000) .. "ms to initialize!")
+library:Notify("press right ctrl to open/close!")
