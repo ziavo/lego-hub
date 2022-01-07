@@ -164,6 +164,7 @@ local tabs = {
 }
 local sections = {
     auto = tabs.features:AddLeftGroupbox("Auto"),
+    scripts = tabs.features:AddRightGroupbox("Scripts"),
 }
 shared.impulse = {
     ["features"] = {
@@ -191,6 +192,17 @@ task.spawn(function() -- auto section
         shared.impulse.auto_rebirth = Toggles.AutoRebirth.Value
 
         bind_render("auto_rebirth", auto_rebirth)
+    end)
+    sections.auto:AddToggle("AutoGift", {Text = "Auto Gift Open", Default = false,}):OnChanged(function()
+        shared.impulse.auto_gift = Toggles.AutoGift.Value
+
+        bind_render("auto_gift", auto_gift)
+    end)
+
+    sections.scripts:AddButton("Sell All CandyCanes", function()
+        signals_folder.candycaneSell:FireServer("sellCandycanes", 1, sellspots_folder.redB.Nutcracker)
+        signals_folder.candycaneSell:FireServer("sellCandycanes", 2, sellspots_folder.greenB.Nutcracker)
+        signals_folder.candycaneSell:FireServer("sellCandycanes", 3, sellspots_folder.goldB.Nutcracker)
     end)
 end)
 
