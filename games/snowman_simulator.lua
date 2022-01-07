@@ -156,7 +156,7 @@ for font, _ in next, Drawing.Fonts do
 	table.insert(fonts, font)
 end;
 local windows = {
-    main = library:CreateWindow("Impulse | v0.01"),
+    main = library:CreateWindow("Impulse | v0.03"),
 }
 local tabs = {
     features = windows.main:AddTab("Features"),
