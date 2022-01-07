@@ -116,7 +116,8 @@ local function auto_gift()
     settings.gift_in_use = true
     local gift = gifts_folder:GetChildren()[1]
     if gift then
-        client.Character:MoveTo(gift.hitbox.Position)
+        client.Character.PrimaryPart.CFrame = gift.hitbox.CFrame
+        --client.Character:MoveTo(gift.hitbox.Position)
         task.wait(.2)
         fireproximityprompt(gift.hitbox.proxGui.ProximityPrompt, 1)
         repeat wait() until gift.hitbox:FindFirstChild("presentExplode1") or gift.hitbox:FindFirstChild("presentExplode2")
