@@ -39,6 +39,13 @@ local function return_base(target)
         if v.Info.Owner.Value == client then return v end
     end
 end
+local function return_bag_amount()
+    local amount = string.split(playerGui.Bottom.Backpack.TextLabel.Text, "/")
+    local current_amount = string.gsub(amount[1], ",", "")
+    local max_amount = string.gsub(amount[2], ",", "")
+
+    return current_amount, max_amount
+end
 
 local function add_to_blender()
     for i,v in pairs(player_base.Blenders:GetChildren()) do
@@ -46,9 +53,15 @@ local function add_to_blender()
     end
 end
 local function auto_grab()
-    for i,v in pairs(fruits_folder:GetChildren()) do
-        if v.Plot.Value == player_base then
-            gameplay_folder.GrabFruit:FireServer(v)
+    local amount, max_amount = return_bag_amount()
+    if amount == nil then return end
+    if tonumber(amount) <= 0 then return end
+
+    if tonumber(amount) <= tonumber(max_amount) then
+        for i,v in pairs(fruits_folder:GetChildren()) do
+            if v.Plot.Value == player_base then
+                gameplay_folder.GrabFruit:FireServer(v)
+            end
         end
     end
 end
