@@ -94,7 +94,8 @@ end
 local function auto_snowman()
     local amount, max_amount = return_snow_amount()
     if amount == nil then return end
-
+    if tonumber(amount) <= 0 then return end
+    
     if tonumber(amount) >= tonumber(max_amount)/2 then
         if not player_base.addingToSnowman.Value then
             signals_folder.addToSnowman:FireServer("addToSnowman")
