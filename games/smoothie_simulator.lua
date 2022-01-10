@@ -40,7 +40,7 @@ local function return_base(target)
     end
 end
 local function return_bag_amount()
-    local amount = string.split(playerGui.Bottom.Backpack.TextLabel.Text, "/")
+    local amount = string.split(playerGui.Info.Bottom.Backpack.TextLabel.Text, "/")
     local current_amount = string.gsub(amount[1], ",", "")
     local max_amount = string.gsub(amount[2], ",", "")
 
