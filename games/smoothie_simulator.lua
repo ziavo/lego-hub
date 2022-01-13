@@ -1,3 +1,8 @@
+--[[
+    never finished, and probrably wont.
+    also, the only feature in here it network laggy too. so just dont just i guess
+--]]
+
 local start_time = os.clock()
 
 local client = game.Players.LocalPlayer
