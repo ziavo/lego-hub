@@ -5,6 +5,7 @@ local branch = "main"
 local games = {
 	[2533391464] = "snowman_simulator",
 	[8158215689] = "smoothie_simulator",
+	[5904328807] = "firework_simulator",
 }
 
 local function import(file)
